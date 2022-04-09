@@ -1,0 +1,110 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* Primary colors */
+
+    --Verydarkblue_bg: hsl(233, 47%, 7%);
+    --Darkdesaturatedblue_card_bg: hsl(244, 38%, 16%);
+    --Softviolet_accent: hsl(277, 64%, 61%);
+
+    /* Neutral colors */
+
+    --White_heading_stats: hsl(0, 0%, 100%);
+    --slightlytransparentwhite_paragraph: hsla(0, 0%, 100%, 0.75);
+    --Slightlytransparentwhite_stat_headings: hsla(0, 0%, 100%, 0.6);
+
+    /* Font Family */
+
+    --font_Inter:'Inter', sans-serif;
+    --font_Lexend:'Lexend Deca', sans-serif;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background: var(--Verydarkblue_bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 700px;
+    background: var(--Darkdesaturatedblue_card_bg);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row-reverse;
+ }
+
+ .calq {
+    width:100%;
+    height:283px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--Softviolet_accent);
+    opacity: 1;
+}
+
+.card .calq::before{
+    display: inline-block;
+    width:inherit;
+    height:inherit; 
+    content: "";
+    background:url(images/image-header-desktop.jpg) no-repeat;
+    background-size:contain;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    opacity: 0.5;
+}
+
+h2{
+    font-family: var(--font_Inter);
+    font-weight: 700;
+    color:var(--White_heading_stats);
+    margin: 50px 40px 20px 40px; 
+}
+
+h2>span {
+    color: var(--Softviolet_accent);
+}
+
+p {
+    font-family: var(--font_Inter);
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--slightlytransparentwhite_paragraph);
+    margin: 0px 40px 0px 40px;
+    padding-right: 20px;
+    line-height: 150%;
+}
+
+.stats {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    margin: 20px 60px 0 40px;
+}
+
+.stats span {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--slightlytransparentwhite_paragraph);
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.stats span b {
+    color: var(--White_heading_stats);
+    font-family: var(--font_Inter);
+    font-weight: 700;
+    font-size: 15px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
