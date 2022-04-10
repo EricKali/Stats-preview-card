@@ -97,7 +97,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 60px 0 40px;
+    margin: 20px 60px 20px 40px;
 }
 
 .stats span {
